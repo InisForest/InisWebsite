@@ -1,9 +1,15 @@
 import { InisElement, jsx, jss } from "../Componentisation";
-import { InisButtonElement } from "./InisButton.js"
+import { InisButtonElement } from "./InisButton/InisButton.js"
+import { InisLogoElement } from "./InisLogo/InisLogo.js"
+import { InisJoinMeOnTwitchElement } from "./JoinMeOnTwitch/JoinMeOnTwitch.js"
+import { DonateButtonElement } from "./DonateButton/DonateButton.js"
 
 export { jsx }
-export default { 
+export default {
     jsx, jss,
     Element : InisElement,
-    Button: InisButtonElement
+    Logo: InisLogoElement,
+    Button: InisButtonElement,
+    JoinMeOnTwitch: InisJoinMeOnTwitchElement,
+    DonateButton: DonateButtonElement
 };

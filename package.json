@@ -20,20 +20,6 @@
     "url": "https://github.com/InisForest/billboard-site/issues"
   },
   "homepage": "https://github.com/InisForest/billboard-site#readme",
-  "babel": {
-    "plugins": [
-      [
-        "@babel/plugin-transform-react-jsx",
-        {
-          "pragma": "jsx"
-        }
-      ],
-      [
-        "bare-import-rewrite"
-      ]
-    ],
-    "comments": false
-  },
   "devDependencies": {
     "@babel/cli": "^7.13.14",
     "@babel/core": "^7.13.15",
@@ -42,10 +28,15 @@
     "@webpack-cli/generators": "^2.0.0",
     "babel-loader": "^8.2.2",
     "babel-plugin-bare-import-rewrite": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "css-loader": "^5.2.1",
+    "url-loader": "^4.1.1",
     "webpack": "^5.31.2",
     "webpack-cli": "^4.6.0"
   },
   "dependencies": {
-    "jss": "^10.6.0"
+    "jss": "^10.6.0",
+    "regenerator-runtime": "^0.13.7",
+    "twitch-stream-embed": "^1.0.4"
   }
 }

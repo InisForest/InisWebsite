@@ -1,0 +1,186 @@
+@import "./src/InisUI/typography.css";
+
+:root {
+    --content-width: 90vw;
+}
+    
+body {
+    background-color: black;
+    margin: 5vw;
+    color: white;
+}
+
+.background-image {
+    position: fixed;
+    z-index: -2;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+
+.inis-image {
+    display: none;
+    position: fixed;
+    right: 25vw;
+    margin-right: calc(-1 * ((75vh * .75) * .5));
+    bottom: 0;
+    height: 75vh;
+    z-index: -1;
+
+    animation-name: from-right;
+    animation-duration: .5s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+
+.heading {
+    display: flex;
+    align-items: baseline;
+    width: var(--content-width);
+}
+
+.inis-logo {
+    width: calc(var(--content-width) * .5);
+    position: relative;
+
+    animation-name: from-above;
+    animation-duration: .5s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+.heading__socials {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    
+}
+
+
+.heading__discord img, 
+.heading__twitter img,
+.heading__youtube img {
+    height: 40px;
+    margin-left: 30px;
+
+    animation-name: from-right;
+    animation-duration: .5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+}
+
+.heading__discord img {
+    height: 45px;
+    animation-delay: 1.4s;
+    margin-bottom: -5.5px;
+}
+
+.heading__twitter img {
+    animation-delay: 1.5s;
+}
+
+.heading__youtube img {
+    
+    animation-delay: 1.6s;
+}
+
+.twitch-embed {
+    display: block;
+    margin-top: 60px;
+    width: var(--content-width);
+    height: calc(var(--content-width) * .5625);
+    box-shadow: black 0 0 25px;
+
+    animation-name: from-below;
+    animation-duration: .5s;
+    animation-timing-function: ease-in;
+    animation-delay: 1.4s;
+    animation-fill-mode: backwards;
+}
+
+.call-to-actions {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: var(--content-width);
+}
+
+.call-to-actions .donate-button {
+    animation-name: from-left;
+    animation-duration: .5s;
+    animation-timing-function: ease-in;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+.call-to-actions .join-me-on-twitch {
+    animation-name: from-right;
+    animation-duration: .5s;
+    animation-timing-function: ease-in;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+@media (min-width: 1000px) {
+
+    :root {
+        --content-width: 700px;
+    }
+
+    .inis-image {
+        display: block;
+    }
+}
+
+@keyframes from-left {
+    from {
+        opacity: 0;
+        transform: translateX(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes from-right {
+    from {
+        opacity: 0;
+        transform: translateX(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes from-above {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes from-below {
+    from {
+        opacity: 0;
+
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}

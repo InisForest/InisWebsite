@@ -8,7 +8,6 @@ const jsx = (tag, attrs = {}, ...children) => {
         return new customElement({ ...attrs, children });
     }
     const elem = Object.assign(document.createElement(tag), attrs);
-    Object.assign(elem.style, attrs.style);
     for (const child of children) {
         if (Array.isArray(child)) elem.append(...child);
         else elem.append(child);

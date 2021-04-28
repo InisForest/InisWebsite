@@ -7,29 +7,35 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
     },
+    devtool: 'eval-source-map',
     plugins: [
         // Add your plugins here
         // Learn more obout plugins from https://webpack.js.org/configuration/plugins/
     ],
+    optimization: {
+        minimize: true,
+    },
     module: {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                include: path.resolve(__dirname, 'src'),
-
-                loader: 'babel-loader',
+                loader: "babel-loader",
                 options: {
                     presets: ['@babel/preset-env'],
                     plugins: [
-                        [
-                          "@babel/plugin-transform-react-jsx",
-                          {
-                            "pragma": "jsx"
-                          }
-                        ]
+                        [ "@babel/plugin-transform-react-jsx", { "pragma": "jsx" } ],
+                        [ "@babel/plugin-proposal-class-properties", { "loose": true } ],
                     ],
                     comments: false
                 }
+            },
+            {
+                test: /\.css$/i,
+                use: [ "css-loader" ],
+            },
+            {
+                test: /\.(png|jpg|svg)$/,
+                loader: 'url-loader'
             }
         ],
     },

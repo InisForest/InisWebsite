@@ -1,0 +1,26 @@
+.donate-button .inis-button {
+    width: 190px;
+}
+
+.donate-button .inis-button__content {
+    display: flex;
+    align-items: center;
+    text-shadow: none;
+    font-weight: bold;
+    color: #653B1B;
+}
+
+.donate-button__text {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.donate-button__heart {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.donate-button__heart {
+    height: 100%;
+    /* width: 100%; */
+}

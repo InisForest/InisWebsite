@@ -22,11 +22,14 @@ class InisElement extends HTMLElement {
     }
 
     connectedCallback() {
-        const style = document.createElement("style");
-        this.attachShadow({mode: 'open'});
-        this.shadowRoot.appendChild(this.render())
-        style.innerHTML = jss.createStyleSheet(this.style(), { generateId : rule => rule.key }).toString();
-        this.shadowRoot.appendChild(style);
+        const styleElement = document.createElement("style");
+        // this.attachShadow({mode: 'open'});
+        this.appendChild(this.render());
+        const style = this.style();
+        if (style !== null) {
+            styleElement.innerHTML = style[0][1];
+            this.appendChild(styleElement);
+        }
     }
 
     style() {

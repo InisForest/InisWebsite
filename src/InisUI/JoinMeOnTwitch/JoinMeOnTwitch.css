@@ -1,0 +1,30 @@
+.join-me-on-twitch {
+    /* display: flex; */
+    align-items: center;
+    /* text-wrapping */
+}
+
+.join-me-on-twitch__text {
+    margin-right: 10px;
+}
+
+.join-me-on-twitch__buttons {
+    display: inline-block;
+}
+
+.join-me-on-twitch__button {
+    margin-right: 10px;
+}
+
+.join-me-on-twitch__logo {
+    display: inline-block;
+    /* margin: 6px 15px; */
+    height: 30px;
+}
+
+.join-me-on-twitch__heart {
+    height: 1rem;
+    margin-left: 10px;
+    margin-bottom: 25px;
+    margin-top: -25px;
+}

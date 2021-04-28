@@ -2,12 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Inis. The wholesome sheep vtuber streaming 5 days a week at twitch.tv/inis_chan!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Inis</title>
+    <link rel="stylesheet" href="index.css" />
     <script type="module" src="dist/main.js"></script>
   </head>
   <body>
-    <inis-button on-click="console.log('World')">hello again!</inis-button>
+    <div class="heading">
+      <inis-logo class="heading__inis-logo"></inis-logo>
+      <div class="heading__socials">
+        <a class="heading__discord" href="https://discord.gg/JWPGN4CNAQ">
+          <img src="/assets/discord.svg" />
+        </a>
+        <a class="heading__twitter" href="https://twitter.com/Inisvtuber">
+          <img src="/assets/twitter.svg" />
+        </a>
+        <a class="heading__youtube" href="https://www.youtube.com/channel/UCKDILQ9wjvg8b5Lq0R6BnzQ">
+          <img src="/assets/youtube.svg" />
+        </a>
+      </div>
+    </div>
+    
+    <img class="inis-image" src="/assets/inis.png" alt="10" />
+
+    <img class="background-image" 
+        alt=""
+        src="/assets/cabin.jpg"
+        srcset="/assets/cabin.jpg 3840w 2160h, /assets/cabin@0.5x.jpg 1920w 1080h, /assets/cabin@0.25x.jpg 960w 540h"
+        sizes="100vw 100vh" />
+    <twitch-stream class="twitch-embed" width="100%" height="100%" theme="dark" autoplay muted allowfullscreen channel="inis_chan"></twitch-stream>
+    <div class="call-to-actions">
+      <donate-button></donate-button> 
+      <join-me-on-twitch></join-me-on-twitch> 
+    </div>
   </body>
 </html>
