@@ -85,22 +85,24 @@ body {
 }
 
 .heading__youtube img {
-    
     animation-delay: 1.6s;
 }
 
-.twitch-embed {
-    display: block;
-    margin-top: 60px;
-    width: var(--content-width);
-    height: calc(var(--content-width) * .5625);
-    box-shadow: black 0 0 25px;
-
+.twitch-embed-container {
     animation-name: from-below;
     animation-duration: .5s;
     animation-timing-function: ease-in;
     animation-delay: 1.4s;
     animation-fill-mode: backwards;
+}
+
+.twitch-embed {
+    display: block;
+    margin-top: 60px;
+    border: none;
+    width: var(--content-width);
+    height: calc(var(--content-width) * .5625);
+    box-shadow: black 0 0 25px;
 }
 
 .call-to-actions {
